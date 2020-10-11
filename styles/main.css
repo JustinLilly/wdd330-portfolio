@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Faustina&family=Montserrat&display=swap');
+html {
+    background-image: url('../images/Con-Air.jpg');
+    background-size: 300px 300px;
+}
+body{
+    width: 80%;
+    margin: auto;
+    background-color: snow;
+    color: rgb(37, 42, 42);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+    padding: 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Faustina', serif;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+nav {
+    /* width: 100%; */
+    /* background-color: pink; */
+    margin: 21px;
+    /* justify-items: center; */
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+nav ul li:first-child {
+    display: block;
+}
+nav ul li {
+    display: none;
+    width: 100%;
+}
+nav ul li a {
+    display: block;
+    position: relative;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 1px solid darkblue;
+    background-color: lightyellow;
+    width: 100px;
+    border-radius: 4px;
+
+}
+nav ul li a:hover {
+    color: pink;
+    
+}
+.show li{
+    display: block;
+}
+main {
+    text-align: center;
+}
+footer{
+    padding: 0 0 5px 5px;
+}
+.code {
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 235, 221);
+    border-radius: 4px;
+    background-color: seashell;
+    padding: 10px;
+    margin: 5px;
+}
+@media only screen and (max-width: 823px) {
+    body {
+        width: 90%;
+    }
+}

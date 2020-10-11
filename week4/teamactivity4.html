@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Team Activity</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <p>Click once for X, twice for O</p>
+    <div class="wrapper">
+        <div class="table">
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+        </div>
+    </div>
+
+    <button type="button" onclick="reset()">Reset</button>
+
+    <br><br>
+    <footer><a href="index.html">Return</a></footer>
+</body>
+<script>
+    const player1 = 'X';
+    const player2 = 'O';
+    const board = document.querySelector('.table');
+    let player = player1;
+
+    function addSymbol(e) {
+        console.log(e.target);
+        e.target.innerHTML = player;
+        if (player == player1) {
+            player = player2;
+        } else {
+            player = player1;
+        }
+
+    }
+    board.addEventListener('click', addSymbol);
+
+    function reset() {
+        // let reset = document.getElementsByClassName('tableCell');
+        let reset = document.querySelectorAll('.tableCell');
+        console.log(reset);
+        for (let i = 0; i < reset.length; i++) {
+            reset[i].innerHTML = "";
+        }
+    }
+</script>
+</html>

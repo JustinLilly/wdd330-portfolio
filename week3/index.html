@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 | WDD 330 Portfolio</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<style>
+    .highlight{
+        background-color: chartreuse;
+    }
+</style>
+<body>
+    <h1>Week 3</h1>
+    <h2>Notes and Stuff</h2>
+    <ul>
+        <li><h3>Event Listeners</h3></li>
+        <li>Can be written inline </li>
+        <p onclick="console.log('You Clicked Me!')">Click
+            ➥ Me</p>
+        <li>
+            <p id="click">Mouse Events</p>
+        </li>
+        <li><p id="mouseParagraph">Mouse Over Events</p></li>
+        <li><p id="keypress">Keyboard Events</p></li>
+    </ul>    
+    <hr>
+    <script>
+        const clickParagraph = document.getElementById('click');
+        clickParagraph.addEventListener('click', () => console.log('click'));
+        clickParagraph.addEventListener('mousedown', () => console.log('down'));
+        clickParagraph.addEventListener('mouseup', () => console.log('up'));
+
+        const doubleClickParagraph = document.getElementById('click');
+        doubleClickParagraph.addEventListener('dblclick', highlight);
+        function highlight(event) {
+            event.target.classList.toggle('highlight');
+        }
+
+        const mouseParagraph = document.getElementById('mouseParagraph');
+        mouseParagraph.addEventListener('mousemove', () => console.log('You Moved!') );
+        mouseParagraph.addEventListener('mouseover', highlight);
+        mouseParagraph.addEventListener('mouseout', highlight);
+
+        const keyPress = document.getElementById('keypress');
+        keyPress.addEventListener('keydown', highlight);
+        keyPress.addEventListener('keyup', (event) => console.log(`You
+        ➥ stopped pressing the key on ${new Date}`));
+    </script>
+</body>
+</html>
