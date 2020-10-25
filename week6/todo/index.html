@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="clear">
+                <span><img src="node_modules/bootstrap-icons/icons/arrow-clockwise.svg" alt="refresh symbol" class="icon"></span>
+            </div>
+            <h1>To Do</h1>
+        </div>
+        <div class="content">
+            <ul id="list">
+            </ul>
+            <div class="filter">
+                <span id="taskCounter">Tasks: 0</span>
+                <span class="allFilter">All</span>
+                <span class="activeFilter">Active</span>
+                <span class="compFilter">Completed</span>
+            </div>
+
+            <div class="add-item" >
+                <input type="text" id="input" placeholder="Add an item">
+                <img src="node_modules/bootstrap-icons/icons/plus-circle.svg" alt="plus symbol" class="icon" id="add-btn">
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+<script src="scripts.js" type="module"></script>
+</html>
