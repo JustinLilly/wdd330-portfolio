@@ -33,6 +33,10 @@ const links = [
         label: "Block One Challenge",
         url: "week6/todo/index.html"
     },
+    {
+        label: "Week 7",
+        url: "week7/index.html"
+    }
 
 ]
 

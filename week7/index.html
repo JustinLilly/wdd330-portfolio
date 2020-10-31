@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 | WDD 330 Portfolio</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <h1>Week 7</h1>
+    <h2>Notes and Stuff</h2>
+    <ul>
+        <li>Functions have properties and methods 
+        <div class="code">
+            <code>function square(x) {
+                    return x*x;
+                }
+                <br>
+                square.length
+                << 1
+            </code>
+        </li>
+        <li>call() method can be used to set the value of <i>this</i> inside a function
+        <div class="code">sayHello.call(bruce);<br>
+        <<  'Hello, my name is Bruce'</div>
+        </li>
+        <li>Can make custom properties to Functions
+            <div class="code">pickNose.description = 'you have two new boogers';<br>
+            << 'you have two new boogers';
+            </div>
+        </li>
+        <li>Can also cache in different values to be retrieved later through Memoization</li>
+        <li>IIFE functions are defined as they are invoked
+            <div class="code">(function(){<br>
+                const temp = 'World';<br>
+                console.log(`Hello ${temp}`);<br>
+            })();
+            << 'Hello World'</div>
+        </li>
+        <li>Can write temporary variables. Useful because variables can't be removed from a scope once declared. Place the variable inside an IIFE to make it temporary
+            <div class="code">
+                (()=>{<br>
+                    const temp = 2;<br>
+                })();
+            </div>
+        </li>
+        <li>IIFE code is great for code that doesn't need to be reused or for enclosing code blocks in a private scope</li>
+        <li>A function can call, define, and redefine itself by assigning an anonymous function to a variable with the same name as the function
+            <div class="code">
+                function party(){<br>
+                    console.log('Wow this is amazing!');<br>
+                    party = function(){<br>
+                    console.log('Been there, got the T-Shirt');<br>
+                    } <br>
+                    }                    
+            </div>
+        </li>
+        <li>Recursive functions invoke themselves until a certain condition is met. 
+            <div class="code">
+                function factorial(n) { <br>
+                    if (n === 0) { <br>
+                    return 1; <br>
+                    } else { <br>
+                    return n * factorial(n - 1); <br>
+                    } <br>
+                    }
+            </div>
+        </li>
+        <li>AJAX is a technique that updates web pages without reloading. Allows web pages to communicate asynchronously with a server</li>
+    </ul>    
+</body>
+</html>
