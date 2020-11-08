@@ -1,0 +1,34 @@
+html body{
+    background-color: rgb(27, 25, 25);
+    color: whitesmoke;
+}
+li {
+    padding: 10px;
+}
+.code {
+    background-color: rgb(27, 27, 49);
+}
+.scale{
+    display: inline-block;
+    transform: scale(2.5, 4.25);
+    color: tomato;
+    transform: rotate(10deg) translateX(40px) scale(1.5);
+    transform: skew(15deg, 4deg);
+    transform-origin: 0 0;
+
+}
+.translate {
+    position: relative;
+    top: 200px;
+    left: 200px;
+}
+   
+.translate :hover {
+    transform: translate(45px, -45px);
+    color: cadetblue;
+}
+
+.rotate {
+    transform: rotate(10deg) translateX(40px) scale(1.5);
+    color: chocolate;
+}
