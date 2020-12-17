@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 | WDD 330 Portfolio</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="w9.css">
+</head>
+<body>
+    <h1>Week 9</h1>
+    <nav class="weekNav">
+        <a href="../week8/">&larr; </a>
+        <a href="..">Main</a>
+        <!-- <a href="teamactivity/">Team Activity</a> -->
+        <a href="../week11/">&rarr;</a>
+    </nav>
+    <h2>Notes and Stuff</h2>
+    <h3>Browser Object Model (BOM):</h3>
+    <ul>
+        <li>Can learn which browser is being used</li>
+        <li>Dimensions of the screen</li>
+        <li>Which pages were visited prior to the current one</li>
+        <li>Creating popup windows</li>
+        <li>The above and more can be accessed by the 'window' object</li>
+        <li>Global variables are actually part of the global object</li>
+        <li>In the browser environment, the global object is the window object (so you don't have to worry about typing window.x, etc.)</li>
+    
+    <li><h4>Dialogs</h4></li>
+        <li>alert() pauses execution of the program to display a dialog box message</li>
+        <li>confirm() same as alert() but provides a boolean value option</li>
+        <li>prompt() same as alert(), but gives an input field</li>
+        <li>Be careful with dialogs because them stopping the program exectution can mess with things like callback functions</li>
+        <br>
+        <li>The navigator property will give you browser information. The userAgent property will give browser and operating system info</li>
+        <button onclick="showBrowserInfo()">Try it out</button><div id="display1"></div>
+        <li>location property contains info about the current page url</li>
+        <li>href property returns the full URL as a string</li>
+        <button onclick="showPageURL()">Try it out</button><div id="display2"></div>
+        <li>protocol property returns the protocol being used</li>
+        <li>host property returns a string of the current domain</li>
+        <li>history property can access info about previously visited pages in the current browser session</li>
+        <button onclick="goHistory(1)">Go Forwards</button onclick="goHistory(0)"><button>Reload</button><button onclick="goHistory(-1)">Go Backwards</button>
+        
+
+
+
+
+       
+    </ul>
+</body>
+<script type="text/javascript" src="w9.js"></script>
+</html>

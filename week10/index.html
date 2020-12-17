@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 | WDD 330 Portfolio</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="w10.css">
+</head>
+<body>
+    <h1>Week 10</h1>
+    <nav class="weekNav">
+        <a href="../week9/">&larr; </a>
+        <a href="..">Main</a>
+        <a href="teamactivity/">Team Activity</a>
+        <a href="../week11/">&rarr;</a>
+    </nav>
+    <h2>Notes and Stuff</h2>
+    <ul>
+        <li>Important to ensure all required forms are filled out</li>
+        <li>Client-side form validation helps ensure submitted data matches requirements</li>
+        <li>It's not the end all be all of validation</li>
+        <li>Validation done in the browser is client-side, while server-side is obviously validated on the server</li>
+        
+        <li>
+            <ul> Two types of client-side validation:
+                <li> Built-in form validation - uses HTML form validation features</li>
+                <li>JavaScript validation - completely customizable validation coded in JavaScript</li>
+            </ul>
+        </li>
+        <h4>Built-in form validation example:</h4>
+        <form>
+            <label for="clientEmail">Email: </label><br>
+            <input type="email" name="email"required><br>
+
+            <label for="clientPassword">Password: </label>
+            <span>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br> 
+            <input type="password" name="password" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"><br>
+
+            <button>Submit</button>
+        </form>
+        
+        <h4>Validating using JavaScript</h4>
+        <li>Most browsers support the Constraint Validation API, which has a bunch of nifty prebuilt methods and properties to help you validate</li>
+        
+        <form novalidate>
+            <p>
+              <label for="mail">
+                <span>Please enter an email address:</span>
+                <input type="email" id="mail" name="mail" required minlength="8">
+                <span class="error" aria-live="polite"></span>
+              </label>
+            </p>
+            <button>Submit</button>
+        </form>
+
+    </ul>
+</body>
+<script type="text/javascript" src="w10.js"></script>
+</html>

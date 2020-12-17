@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Faustina&family=Montserrat&display=swap');
+html{
+    background-image: url(../images/1500x500_cropped.jpg);
+    background-size: 200px;
+}
 body{
-    width: 80%;
+    width: 90%;
     margin: auto;
-    background-color: snow;
+    background-color: rgba(255, 255, 255, .95);;
     color: rgb(37, 42, 42);
     font-family: 'Montserrat', sans-serif;
     border-radius: 4px;
@@ -10,6 +14,10 @@ body{
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Faustina', serif;
+    color: rgb(28, 81, 66);
+}
+header h1{
+    font-size: 32px;
 }
 header {
     display: flex;
@@ -17,10 +25,9 @@ header {
     text-align: center;
 }
 nav {
-    /* width: 100%; */
-    /* background-color: pink; */
     margin: 21px;
-    /* justify-items: center; */
+    display: flex;
+    align-items: center;
 }
 nav ul {
     list-style: none;
@@ -40,20 +47,33 @@ nav ul li a {
     position: relative;
     padding: 10px 15px;
     text-decoration: none;
-    border: 1px solid darkblue;
     background-color: rgb(224, 255, 252);
     width: 100px;
     border-radius: 4px;
+    color: rgb(28, 81, 66);
+    box-shadow: 4px 4px 4px  rgb(28, 81, 66);
 }
 nav ul li a:hover {
-    color: rgb(223, 37, 68);
-    background-color: pink;
+    color: rgb(224, 255, 252);
+    background-color: rgb(28, 81, 66);
+    border: 1px solid rgb(28, 81, 66);
 }
 .show li{
     display: block;
 }
+.weekNav {
+    display: flex;
+    justify-content: space-between;
+}
+.weekNav a{
+    text-decoration: none;
+}
 main {
     text-align: center;
+}
+#myImage{
+    width: 90%;
+    margin: 10px 0 50px 0;
 }
 footer{
     padding: 0 0 5px 5px;
@@ -65,9 +85,20 @@ footer{
     background-color: seashell;
     padding: 10px;
     margin: 5px;
+    overflow: scroll;
 }
-@media only screen and (max-width: 823px) {
-    body {
-        width: 90%;
+@media only screen and (min-width: 823px) {
+    html{
+        background-size: 400px;
+    }
+    header h1{
+        font-size: 72px;
+    }
+    body{
+        width: 75%;
+    }
+    #myImage{
+        margin: 0px 0 100px 0;
+        width: auto;
     }
 }
